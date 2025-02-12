@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+:root{
+    --primary: #ff0d00;
+    --primary-secon: #ce0f05;
+}
+
+@keyframes fade-down{
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade-out{
+    0% {
+        opacity: 0;
+        transform:scale(0.8);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.sub-container{
+    animation: fade-down 0.8s;
+}
+
+.heading-sub{
+    animation: fade-out 0.4s;
+}
+
+.sub-container-2,.footer{
+    animation: fade-down linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.heading-sub-2{
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.container{
+    width: 60%;
+    margin-top: 50px;
+}
+
+.sosmed{
+    font-size: 1.3rem;
+    transition: all 0.3s;
+}
+
+.deskripsi-1{
+    font-size: 2.0rem;
+    font-weight: bold; 
+}
+
+.deskripsi-2{
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar-right{
+    display: flex;
+    flex-direction: column;
+}
+.navbar-link{
+    font-size: 1.1rem;
+}
+
+.gambar-profil{
+    width: 80%;
+}
+
+.heading-sub,.heading-sub-2{
+    width: 150px;
+    border-bottom:2px solid black;
+}
+
+.skill{
+    height: 200px;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.footer-skill{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.deskripsi-proyek{
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.9rem;
+}
+
+.proyek{
+    height: 490px;
+}
+
+.proyek img{
+    width: 30%;
+    transition: all 0.3s;
+}
+
+.proyek img:hover{
+    transform: scale(0.9);
+}
+
+.sosmed i:hover{
+    transform: scale(0.9);
+}
+
+.proyek a{
+    font-size: 0.9rem;
+    background-color: #0d6efd;
+}
+
+.proyek a:hover{
+    background-color: #277cfc;
+}
+
+.proyek-bingkai{
+    width: 55%;
+}
+
+@media screen and (max-width: 768px){
+    .navbar-right{
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    .navbar-right a{
+        margin-right: 5%;
+        margin-top: 10px;
+    }
+    .container{
+        width: 80%;
+    }
+    .profil{
+        display: flex;
+        justify-content: center;
+    }
+    .deskripsi{
+        margin-top: 10px;
+    }
+}
